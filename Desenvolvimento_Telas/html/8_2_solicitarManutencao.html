@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleGeral.css">
+    <link rel="stylesheet" href="../css/styleFrotasReservas.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title class="titulo">Reservex - Solicitar manutenção</title>
+</head>
+
+<div class="container">
+    <header>
+        <div></div>
+        <div class="logo">
+            <a href="http://www.maringa.pr.gov.br" target="_blank">
+                <img class="logo1" src="../images/prefeitura_logo.png" />
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="http://www.maringa.pr.gov.br">Site da Prefeitura</a></li>
+                <li><a href="1_index.html">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h1><img src="../images/LOGO (2).png" class="logo_reservex" alt=""></h1>
+    <h2>Gerenciamento de Frota e Reserva</h2>
+
+    <div id="main">
+        <div class="vertical-menu">
+            <a href="8_visualizarReserva.html" target="conteud">Visualizar reservas</a>
+            <a href="8_1_visualizarVeiculo.html" target="conteudo">Visualizar veículos</a>
+            <a href="2_paginaInicial.html" target="conteudo">Voltar ao menu principal</a>
+        </div>
+        <div class="flex-dados1">
+            <div>
+                <img class="image-modal"
+                    src="https://cdn.group.renault.com/ren/br/renault-new-cars/editorial/2022/manuais/m-LOGAN.jpg.ximg.xsmall.jpg/5165a0f9ca.jpg"
+                    alt="Foto_do_motorista">
+            </div>
+            <div class="flex-dados-left1">
+
+                <div class="impar">Veículo</div><br>
+                <div>Ano</div><br>
+                <div class="impar">Cor</div><br>
+                <div>Chassi</div><br>
+                <div class="impar">Última manutenção</div><br>
+                <div>Próxima manutenção</div><br>
+                <div class="impar">Quilometragem</div><br>
+            </div>
+            <div class="flex-dados-right1">
+                <div class="impar">Renault Logan</div><br>
+                <div>2007</div><br>
+                <div class="impar">Prata</div><br>
+                <div>9BRBLWHEXG0107721</div><br>
+                <div class="impar">15/03/2023</div><br>
+                <div>15/08/2023</div><br>
+                <div class="impar">18651 km</div><br>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<td>
+    <div class="ibutton">
+        <p>Deseja solicitar manutenção para o veículo acima?</p><br>
+        <a href="#openModal"><input type="button" class="button" value="Confirma"></a>
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Descreva o motivo da manutenção: </h2>
+                <textarea name="manutencao" id="manutencao" cols="100" rows="20"></textarea><br><br>
+                <label for="data">Escolha a data: <input type="date"></label><br><br>
+                <label for="hora">Escolha a hora: <input type="time"></label><br><br>
+                <div>
+                    <a href="8_2_solicitarManutencao.html"><input type="button" class="button" value="Voltar"></a>
+                    <input type="submit" class="button" value="Confimar" onclick="alert('Manutenção solicitada!')">
+                </div>
+            </div>
+        </div>
+        <a href="8_visualizarReserva.html"><input type="button" class="button" value="Voltar"></a>
+    </div>
+</td>
+        </body>
+        <div>
+            <footer class="main-footer">
+                <h5>Prefeitura do Município de Maringá</h5>
+                <p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
+            </footer>
+        </div>

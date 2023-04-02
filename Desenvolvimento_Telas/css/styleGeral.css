@@ -1,0 +1,140 @@
+:root{
+    --light-green: rgb(227, 241, 227);
+    --grass-green: rgb(201, 225, 176);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  
+  h1{
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2{
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    background-color: var(--grass-green);
+    padding: 30px 0 30px 0;
+  }
+
+  h3{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1980px;
+    margin: 0 auto;
+  }
+
+ header {
+    min-height: 10vh;
+    background: linear-gradient(rgb(135, 219, 135), white);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+ header div {
+    width: 250px;
+  }
+  
+  header div ul li {
+    margin: 30px 5px 0 20px;
+    display: inline-block;
+  }
+
+  header div ul li:hover {
+    color: white;
+  }
+
+  header img {
+    width: 100px;
+  }
+  
+  header .logo {
+    text-align: center;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    color: black;
+    float: right;
+  }
+  
+  .menu ul li {
+    padding: 5px;
+    margin-bottom: 40px;
+  }
+
+  .menu ul li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu ul li:hover{
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+ 
+  div footer{
+    margin-top: 100px;
+  }
+
+  .main-footer {
+    font-size: 12px;
+    text-align: center;
+  }
+
+.logo_body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+  
+.logo_reservex{
+    width:300px;
+    height: 100px;
+  }
+
+.ibutton {
+    margin-top: 50px;
+    text-align: center;
+    position: bottom;
+  }
+
+.button{
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+  width: 150px;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  background-color: var(--light-green);
+}
+.button:hover{
+  background-color: var(--grass-green);
+}

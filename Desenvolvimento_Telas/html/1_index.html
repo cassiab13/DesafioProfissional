@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/styleGeral.css">
+	<link rel="stylesheet" href="../css/styleIndex.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap"
+		rel="stylesheet">
+	<title>Reservex - Página Inicial</title>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div></div>
+			<div class="logo">
+				<a href="http://www.maringa.pr.gov.br" target="_blank"><img class="logo1"
+						src="../images/prefeitura_logo.png" /></a>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="http://www.maringa.pr.gov.br">Site da Prefeitura</a></li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<h1><img src="../images/LOGO (2).png" class="logo_reservex" alt=""></h1>
+			
+			<h3>Entrar no sistema</h3>
+		
+			<div class="section-container">
+				<div class="entrarSistema">
+					<label for="matricula" class="label-control">Matrícula</label>
+					<input type="text" name="matricula" id="matricula" class="form-control">
+				</div>
+
+				<div class="entrarSistema">
+					<label for="userPassword" class="label-control">Senha</label>
+					<input type="password" name="userPassword" id="userPassword" class="form-control">
+				</div>
+
+				<div class="permanecerLogado">
+					<label>
+						<input type="checkbox" name="permanecerLogado" value="1"> Manter-me conectado
+					</label>
+				</div>
+				<form class="ibutton" action="2_paginaInicial.html" method="get">
+					<button type="submit" class="button">Entrar</button>
+					<button type="submit" class="button" formaction="3_esqueciMinhaSenha.html">Esqueci minha senha</button>
+				</form>
+			</div>
+		</div>
+</body>
+				<footer class="main-footer">
+					<h5>Prefeitura do Município de Maringá</h5>
+					<p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
+				</footer>
+		
+
+
+</html>

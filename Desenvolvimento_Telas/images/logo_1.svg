@@ -1,0 +1,24 @@
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.73 61.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+        font-family: BarlowCondensed-Thin, 'Barlow Condensed';
+        font-size: 57.12px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        fill: #008d36;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <path class="cls-3" d="M184.58,8.11s12.66,0,15.64,.04c2.98,.05,2.87,2.72,2.87,2.72v15.66c0,1.62-1.44,1.4-2.06,1.38-1.62-.04-2.98-.21-2.96-1.65,.03-2.4,0-9.62,0-9.62,0,0-29.17,29.49-30.8,31.01-1.62,1.52-3.87,0-3.87,0,0,0-34.09-34.2-35.51-35.82-1.41-1.62,.51-3.24,.51-3.24,1.62-1.59,4.25,1.2,4.25,1.2l27.4,27.19,4.21,4.58c.95,1.14,1.96,0,1.96,0l28.16-28.43h-9.96c-1.8,0-1.77-2.71-1.77-2.71,.05-1.55,.52-2.32,1.78-2.31"/>
+    <text class="cls-1" transform="translate(0 48.55)"><tspan x="0" y="0">RE</tspan><tspan class="cls-2" x="48.61" y="0">S</tspan><tspan x="70.89" y="0">ER</tspan></text>
+    <text class="cls-1" transform="translate(208.09 49.01)"><tspan x="0" y="0">EX</tspan></text>
+  </g>
+</svg>

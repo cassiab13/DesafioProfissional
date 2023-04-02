@@ -1,0 +1,44 @@
+main {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.divi{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+ 
+}
+
+.divi nav {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  height: 200px;
+}
+
+.divi nav:hover{
+  background-color: rgb(198, 249, 204);
+  box-shadow: 2px 2px 2px 2px rgba(0,0, 0, 0.1);
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.divi nav a{
+  width: 220px;
+  height: 180px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.divi nav img {
+    margin:0 40px 10px 60px;
+    width: 140px;
+    height: 150px;
+  }
+

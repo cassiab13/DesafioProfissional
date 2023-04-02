@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleGeral.css">
+    <link rel="stylesheet" href="../css/styleFrotasReservas.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title class="titulo">Reservex - Visualizar Veículo</title>
+</head>
+
+<div class="container">
+    <header>
+        <div></div>
+        <div class="logo">
+            <a href="http://www.maringa.pr.gov.br" target="_blank">
+                <img class="logo1" src="../images/prefeitura_logo.png" />
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="http://www.maringa.pr.gov.br">Site da Prefeitura</a></li>
+                <li><a href="1_index.html">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <body>
+        <h1><img src="../images/LOGO (2).png" class="logo_reservex" alt=""></h1>
+        <h2>Gerenciamento de Frota e Reserva</h2>
+        <div id="main">
+            <div class="vertical-menu">
+                <a href="8_visualizarReserva.html" target="_self">Visualizar reservas</a>
+                <a href="8_1_visualizarVeiculo.html" target="_self" class="active">Visualizar veículos</a>
+                <a href="2_paginaInicial.html" target="conteudo">Voltar ao menu principal</a>
+            </div>
+
+            <section class="section">
+                <br>
+                <h2>Visualizar veículos</h2>
+                <table>
+                    <tr>
+                        <th>Veículo</th>
+                        <th>Placa</th>
+                        <th>Última manutenção</th>
+                        <th>Próxima manutenção</th>
+                        <th>Status</th>
+                        <th></th>
+                        <th></th>
+                        <TH></TH>
+                    </tr>
+                    <tr>
+                        <td>Renault Logan</td>
+                        <td>OAH4758</td>
+                        <td>15/02/2023</td>
+                        <td>15/08/2023</td>
+                        <td class="disponivel">DISPONÍVEL</td>
+                        <td>
+                            <a href="#openModal">
+                                <input type="button" class="button" value="Visualizar detalhes">
+                            </a>
+                            <div id="openModal" class="modalDialog1">
+                                <div>
+                                    <a href="#close" title="Close" class="close">X</a>
+                                    <h2>Dados do veículo</h2>
+                                    <div class="dados-modal">
+                                        <div>
+                                            <img class="image-modal"
+                                                src="https://cdn.group.renault.com/ren/br/renault-new-cars/editorial/2022/manuais/m-LOGAN.jpg.ximg.xsmall.jpg/5165a0f9ca.jpg"
+                                                alt="Foto_do_motorista">
+                                        </div>
+                                        <div class="modal-flex-dados">
+                                            <div class="modal-flex-dados-left">
+                                                <div class="impar">Veículo</div><br>
+                                                <div>Ano</div><br>
+                                                <div class="impar">Cor</div><br>
+                                                <div>Chassi</div><br>
+                                                <div class="impar">Última manutenção</div><br>
+                                                <div>Próxima manutenção</div><br>
+                                                <div class="impar">Quilometragem</div><br>
+                                            </div>
+                                            <div class="modal-flex-dados-right">
+                                                <div class="impar">Renault Logan</div><br>
+                                                <div>2007</div><br>
+                                                <div class="impar">Prata</div><br>
+                                                <div>9BRBLWHEXG0107721</div><br>
+                                                <div class="impar">15/03/2023</div><br>
+                                                <div>15/08/2023</div><br>
+                                                <div class="impar">18651 km</div><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="button" class="button" value="Vincular reserva"
+                                onclick="alert('Reserva vinculada com sucesso!')"></td>
+                        <td><a href="8_2_solicitarManutencao.html"><input type="button" class="button" value="Solicitar manutenção"></a>
+                        </td>
+                    <tr>
+                        <td>Renault Logan</td>
+                        <td>OAH4758</td>
+                        <td>15/02/2023</td>
+                        <td>15/08/2023</td>
+                        <td class="indisponivel">INDISPONÍVEL</td>
+                        <td>
+                            <a href="#openModal"><input type="button" class="button" value="Visualizar detalhes"></a>
+                            <div id="openModal" class="modalDialog">
+                                <div>
+                                    <a href="#close" title="Close" class="close">X</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </body>
+    <div class="ibutton">
+        <a href="8_visualizarReserva.html"><input type="button" class="button" value="Voltar"></a>
+    </div>
+    <div>
+        <footer class="main-footer">
+            <h5>Prefeitura do Município de Maringá</h5>
+            <p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
+        </footer>
+    </div>
+
+</html>

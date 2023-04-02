@@ -1,0 +1,112 @@
+:root{
+    --light-green: rgb(227, 241, 227);
+    --grass-green: rgb(201, 225, 176);
+}
+
+.grid-menu{
+    max-width: 100%;
+    display: grid;
+    margin: 50px 0 0 0;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.grid-menu div {
+    min-height: 100px;
+}
+
+.grid-menu div:nth-child(1) {
+    grid-row: span 5;
+}
+
+.grid-menu div:nth-child(2) {
+    grid-row: span 5;
+}
+.grid-menu div:nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 3;
+}
+
+.grid-menu div:nth-child(4){
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.dados-geral{
+    box-shadow: 2px 2px 2px 2px rgba(0,0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px 0 0 30px;
+    background-color: var(--light-green);
+}
+.flex-dados{
+    margin-top: 20px;
+    margin-right: 50px;
+    height: 20px;
+}
+
+.flex-dados-left{
+    width: 20%;
+    float:left;
+    padding-top: 30px;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size:1.1rem;
+}
+
+.flex-dados-right{
+    width: 80%;
+    float: right;
+    padding-top: 30px;
+    
+}
+
+#main {
+    margin: 0px, 0px, 20px, 150px;
+    width: 100%;
+    display: flex;
+  }
+  
+  #main .vertical-menu {
+    margin-top: 40px;
+    height: 100%;
+  }
+  
+  #main .vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  #main .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  #main .vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .driver{
+    width: 200px;
+    height: 200px;
+    background-color: var(--light-green);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0, 0, 0.1);
+  }
+
+  .ibutton {
+    margin-top: 50px;
+    text-align: center;
+    position: bottom;
+    padding: 5px;
+  }
+
+@media (max-width: 768px){
+    .grid-menu div:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;}
+}
