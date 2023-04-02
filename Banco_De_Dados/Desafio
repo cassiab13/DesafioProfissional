@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style>
+      .table {
+        background-color:#F5F5FF;
+        border-left:4px solid gray;
+        border-bottom:4px solid gray;
+        border-top:4px solid gray;
+        border-right:4px solid gray;
+        margin-bottom:3em;
+        margin-left:2em;
+        margin-right:2em;
+        padding:1em;
+      }
+      .tableNameHeading h1 {
+          display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:125%;
+        font-weight:bold;
+      }
+        
+      .tableNameHeading h2 {
+        display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:115%;
+        font-weight:normal;
+      }
+      
+      .tableComment { 
+        background-color:#e4efff; margin-bottom:20px;
+      }
+      
+      .tableDefinition { 
+        padding:2px;
+        border-collapse:collapse;
+        margin-top:1em;
+      }
+
+      .tdTableDefinition {
+        padding-right:10px;
+        vertical-align:top;
+        border-top:1px solid #C0C0C0;
+      }
+
+      .tdLogicalColName {
+        width:20em;
+      }
+      
+      .tdPhysicalColName {
+        width:20em;
+      }
+      
+      .tdDataType {
+        width:10em;
+      }
+
+      .tdPkFlag {
+        width:4em;
+      }
+
+      .tdNullFlag {
+        width:9em;
+      }
+
+      .tdTableHeading {
+        padding:2px;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+        vertical-align:top;
+        border-bottom: 1px solid #C0C0C0;
+        background-color: rgb(240,240,240);
+      }
+      
+      .subTitle {
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .references {
+      }
+      .comment {
+        color:#666666;
+        margin-left:3em;
+        padding:0.25em;
+      }
+    </style>
+<title>SQL_Desafio</title>
+</head>
+<body>
+<center>
+<h2>SQL_Desafio</h2>
+</center>
+<h3>List of tables</h3>
+<ul>
+<li>
+<a href="#Administrador">Administrador</a>
+</li>
+<li>
+<a href="#Emprestimo de Ve%C3%ADculo">Emprestimo de Ve&iacute;culo</a>
+</li>
+<li>
+<a href="#Manuten%C3%A7%C3%A3o">Manuten&ccedil;&atilde;o</a>
+</li>
+<li>
+<a href="#Motorista">Motorista</a>
+</li>
+<li>
+<a href="#Pessoas">Pessoas</a>
+</li>
+<li>
+<a href="#Reserva de Ve%C3%ADculo">Reserva de Ve&iacute;culo</a>
+</li>
+<li>
+<a href="#Secretarias">Secretarias</a>
+</li>
+<li>
+<a href="#Ve%C3%ADculos">Ve&iacute;culos</a>
+</li>
+</ul>
+<div class="tableNameHeading">
+<h1>Administrador<a name="Administrador"></a>
+</h1>
+<h2>
+      (Physical Name: Administrador)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Matr&iacute;cula (PK)
+                &nbsp;(<a href="#Pessoas">FK</a>)
+              </td><td class="tdTableDefinition">Matricula</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Tipo de Permiss&atilde;o</td><td class="tdTableDefinition">tipoPermissao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Pessoas">Pessoas</a> through (Matr&iacute;cula)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Emprestimo de Ve&iacute;culo<a name="Emprestimo de Ve%C3%ADculo"></a>
+</h1>
+<h2>
+      (Physical Name: Emprestimo)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Identificador do Empr&eacute;stimo (PK)</td><td class="tdTableDefinition">idEmprestimo</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Placa do Ve&iacute;culo
+                &nbsp;(<a href="#Ve%C3%ADculos">FK</a>)
+              </td><td class="tdTableDefinition">placa</td><td class="tdTableDefinition">VARCHAR(7)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">C&oacute;digo da Secretaria
+                &nbsp;(<a href="#Secretarias">FK</a>)
+              
+                &nbsp;(<a href="#Ve%C3%ADculos">FK</a>)
+              </td><td class="tdTableDefinition">codigoSecretaria</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Status do Empr&eacute;stimo</td><td class="tdTableDefinition">statusEmprestimo</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Hor&aacute;rio Final do Empr&eacute;stimo</td><td class="tdTableDefinition">horarioFinalEmprestimo</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Data de In&iacute;cio do Empr&eacute;stimo</td><td class="tdTableDefinition">dataInicioEmprestimo</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Hor&aacute;rio In&iacute;cio do Empr&eacute;stimo</td><td class="tdTableDefinition">horarioInicioEmprestimo</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Data Final do Empr&eacute;stimo</td><td class="tdTableDefinition">dataFinalEmprestimo</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Secretarias">Secretarias</a> through (C&oacute;digo da Secretaria)</li>
+<li>
+<a href="#Ve%C3%ADculos">Ve&iacute;culos</a> through (Placa do Ve&iacute;culo, C&oacute;digo da Secretaria)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Manuten&ccedil;&atilde;o<a name="Manuten%C3%A7%C3%A3o"></a>
+</h1>
+<h2>
+      (Physical Name: Manutencao)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Identificador de Manuten&ccedil;&atilde;o (PK)</td><td class="tdTableDefinition">idManutencao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Hor&aacute;rio da Manuten&ccedil;&atilde;o</td><td class="tdTableDefinition">horarioManutencao</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Data de Manuten&ccedil;&atilde;o</td><td class="tdTableDefinition">dataManutencao</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Pr&oacute;xima Manuten&ccedil;&atilde;o</td><td class="tdTableDefinition">proximaManutencao</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Matr&iacute;cula
+                &nbsp;(<a href="#Motorista">FK</a>)
+              </td><td class="tdTableDefinition">Matricula</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Placa do Ve&iacute;culo
+                &nbsp;(<a href="#Ve%C3%ADculos">FK</a>)
+              </td><td class="tdTableDefinition">placa</td><td class="tdTableDefinition">VARCHAR(7)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Ve%C3%ADculos">Ve&iacute;culos</a> through (Placa do Ve&iacute;culo)</li>
+<li>
+<a href="#Motorista">Motorista</a> through (Matr&iacute;cula)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Motorista<a name="Motorista"></a>
+</h1>
+<h2>
+      (Physical Name: Motorista)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Matr&iacute;cula (PK)
+                &nbsp;(<a href="#Pessoas">FK</a>)
+              </td><td class="tdTableDefinition">Matricula</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">CNH</td><td class="tdTableDefinition">cnh</td><td class="tdTableDefinition">VARCHAR(11)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Data de vencimento</td><td class="tdTableDefinition">dataVencimento</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Tipo de CNH</td><td class="tdTableDefinition">tipoCnh</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Pessoas">Pessoas</a> through (Matr&iacute;cula)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#Manuten%C3%A7%C3%A3o">Manuten&ccedil;&atilde;o</a> referencing (Matr&iacute;cula)</li>
+<li>
+<a href="#Reserva de Ve%C3%ADculo">Reserva de Ve&iacute;culo</a> referencing (Matr&iacute;cula)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Pessoas<a name="Pessoas"></a>
+</h1>
+<h2>
+      (Physical Name: Pessoa)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Matr&iacute;cula (PK)</td><td class="tdTableDefinition">Matricula</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">C&oacute;digo da Secretaria (PK)
+                &nbsp;(<a href="#Secretarias">FK</a>)
+              </td><td class="tdTableDefinition">codigoSecretaria</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Nome</td><td class="tdTableDefinition">nomePessoa</td><td class="tdTableDefinition">VARCHAR(50)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">CPF</td><td class="tdTableDefinition">CpfPessoa</td><td class="tdTableDefinition">VARCHAR(11)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">E-mail</td><td class="tdTableDefinition">Email</td><td class="tdTableDefinition">VARCHAR(50)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Secretarias">Secretarias</a> through (C&oacute;digo da Secretaria)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#Motorista">Motorista</a> referencing (Matr&iacute;cula)</li>
+<li>
+<a href="#Administrador">Administrador</a> referencing (Matr&iacute;cula)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Reserva de Ve&iacute;culo<a name="Reserva de Ve%C3%ADculo"></a>
+</h1>
+<h2>
+      (Physical Name: reservaVeiculo)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Identificador da Reserva (PK)</td><td class="tdTableDefinition">idReserva</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Hor&aacute;rio da Reserva</td><td class="tdTableDefinition">horarioReserva</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Data da Reserva</td><td class="tdTableDefinition">dataReserva</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Quilometragem Inicial</td><td class="tdTableDefinition">kmInicial</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Quilometragem Final</td><td class="tdTableDefinition">kmFinal</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Matr&iacute;cula
+                &nbsp;(<a href="#Motorista">FK</a>)
+              </td><td class="tdTableDefinition">Matricula</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Placa do Ve&iacute;culo
+                &nbsp;(<a href="#Ve%C3%ADculos">FK</a>)
+              </td><td class="tdTableDefinition">placa</td><td class="tdTableDefinition">VARCHAR(7)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Status da Reserva</td><td class="tdTableDefinition">statusReserva</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">C&oacute;digo da Secretaria
+                &nbsp;(<a href="#Ve%C3%ADculos">FK</a>)
+              </td><td class="tdTableDefinition">codigoSecretaria</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Ve%C3%ADculos">Ve&iacute;culos</a> through (Placa do Ve&iacute;culo, C&oacute;digo da Secretaria)</li>
+<li>
+<a href="#Motorista">Motorista</a> through (Matr&iacute;cula)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Secretarias<a name="Secretarias"></a>
+</h1>
+<h2>
+      (Physical Name: Secretaria)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">C&oacute;digo da Secretaria (PK)</td><td class="tdTableDefinition">codigoSecretaria</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Nome da Secretaria</td><td class="tdTableDefinition">nomeSecretaria</td><td class="tdTableDefinition">VARCHAR(50)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#Ve%C3%ADculos">Ve&iacute;culos</a> referencing (C&oacute;digo da Secretaria)</li>
+<li>
+<a href="#Pessoas">Pessoas</a> referencing (C&oacute;digo da Secretaria)</li>
+<li>
+<a href="#Emprestimo de Ve%C3%ADculo">Emprestimo de Ve&iacute;culo</a> referencing (C&oacute;digo da Secretaria)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>Ve&iacute;culos<a name="Ve%C3%ADculos"></a>
+</h1>
+<h2>
+      (Physical Name: Veiculo)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Placa do Ve&iacute;culo (PK)</td><td class="tdTableDefinition">placa</td><td class="tdTableDefinition">VARCHAR(7)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">C&oacute;digo da Secretaria (PK)
+                &nbsp;(<a href="#Secretarias">FK</a>)
+              </td><td class="tdTableDefinition">codigoSecretaria</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Cor</td><td class="tdTableDefinition">Cor</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Modelo</td><td class="tdTableDefinition">modelo</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Ano de Fabrica&ccedil;&atilde;o</td><td class="tdTableDefinition">anoFabricacao</td><td class="tdTableDefinition">NUMERIC(4,0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Nome do Ve&iacute;culo</td><td class="tdTableDefinition">nomeVeiculo</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">Chassi</td><td class="tdTableDefinition">chassi</td><td class="tdTableDefinition">VARCHAR(17)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#Secretarias">Secretarias</a> through (C&oacute;digo da Secretaria)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#Manuten%C3%A7%C3%A3o">Manuten&ccedil;&atilde;o</a> referencing (Placa do Ve&iacute;culo)</li>
+<li>
+<a href="#Reserva de Ve%C3%ADculo">Reserva de Ve&iacute;culo</a> referencing (Placa do Ve&iacute;culo, C&oacute;digo da Secretaria)</li>
+<li>
+<a href="#Emprestimo de Ve%C3%ADculo">Emprestimo de Ve&iacute;culo</a> referencing (Placa do Ve&iacute;culo, C&oacute;digo da Secretaria)</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
