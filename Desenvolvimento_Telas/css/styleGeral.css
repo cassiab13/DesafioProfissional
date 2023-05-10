@@ -42,6 +42,19 @@
     margin: 0 auto;
   }
 
+  form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  input {
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+
  header {
     min-height: 10vh;
     background: linear-gradient(rgb(135, 219, 135), white);
@@ -99,7 +112,7 @@
 
  
   div footer{
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
   .main-footer {

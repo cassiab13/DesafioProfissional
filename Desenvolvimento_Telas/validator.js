@@ -1,4 +1,4 @@
-
+//validação do formulário
 class ValidateForm {
     constructor() {
         this.form = document.querySelector('.form');
