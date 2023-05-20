@@ -1,39 +1,55 @@
 .menu-a{
-    width: 100%;
-    margin-top: 100px;
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-    gap: 30px;
+  width: 100%;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  gap: 30px;
   }
   
   .menu-a nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 280px;
-    height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 200px;
   }
   
   .menu-a nav:hover{
-    background-color: rgb(198, 249, 204);
-    box-shadow: 2px 2px 2px 2px rgba(0,0, 0, 0.1);
-    border-radius: 20px;
-    transition: 1s;
+  background-color: rgb(198, 249, 204);
+  box-shadow: 2px 2px 2px 2px rgba(0,0, 0, 0.1);
+  border-radius: 20px;
+  transition: 1s;
   }
   
   .menu-a nav a{
-    width: 220px;
-    height: 180px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
+  width: 220px;
+  height: 180px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
   }
   
   .menu-a nav img {
-      margin:0 40px 10px 40px;
-      width: 140px;
-      height: 150px;
-    }
+  margin: 0 40px 10px 40px;
+  width: 140px;
+  height: 150px;
+  }
   
+  @media only screen and (max-width: 768px) {
+  .menu-a {
+  gap: 20px;
+  }
+  
+  .menu-a nav {
+  width: 200px;
+  height: 150px;
+  }
+  
+  .menu-a nav img {
+  margin: 0 20px 10px 20px;
+  width: 120px;
+  height: 130px;
+  }
+  }
   

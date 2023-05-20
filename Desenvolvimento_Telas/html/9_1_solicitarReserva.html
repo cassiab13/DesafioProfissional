@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleGeral.css">
+    <link rel="stylesheet" href="../css/styleIndex.css">
+    <link rel="stylesheet" href="../css/styleCadastro.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <title class="titulo">Reservex - Módulo Motorista</title>
+</head>
+<div class="container">
+    <header>
+        <div></div>
+        <div class="logo">
+            <a href="http://www.maringa.pr.gov.br" target="_blank">
+                <img class="logo1" src="../images/prefeitura_logo.png" />
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="http://www.maringa.pr.gov.br">Site da Prefeitura</a></li>
+                <li><a href="1_index.html">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <body>
+        <h1><img src="../images/LOGO (2).png" class="logo_reservex" alt=""></h1>
+        <h2>Solicitar reserva</h2>
+        <div class="nome-motorista">
+            <span id="nomeMotoristaTopo"></span>
+        </div>
+        <section class="form-content">
+            <div class="forms-items">
+                <form method="post" action="#" class="form">
+                    <div class="tb-2">
+                        <br>
+                        <label class="visible label_style" for="sector">Escolha sua Secretaria: </label><br><br>
+                        <select name="sector" id="sector">
+                            <option value="SAET" id="01">01 -Secretaria de Aceleração Econômica e Turismo</option>
+                            <option value="SEL" id="02">02 - Secretaria de Esportes e Lazer</option>
+                            <option value="SF" id="03">03 - Secretaria da Fazenda</option>
+                            <option value="SMU" id="04">04 -Secretaria da Mobilidade Urbana</option>
+                            <option value="SF" id="05">05 - Secretaria de Frotas</option>
+                            <br><br>
+                        </select><br><br>
+                    </div>
+                    <div>
+                        <label class="visible label_style">Digite seu e-mail: </label>
+                        <input type="text" class="email valid input-reserva" placeholder="Email">
+                    </div>
+                    <div class="reserva_veiculo">
+                        <label class="visible label_style" for="start_date_time">Data e horário de início: </label>
+                        <input class="input-reserva" type="datetime-local">
+                        <label class="visible label_style" for="final_date_time">Data e horário final: </label>
+                        <input class="input-reserva" type="datetime-local">
+                    </div>
+            </div>
+            <div class="descricao-container">
+                <label for="descricao">Descreva o serviço a ser realizado</label>
+                <textarea name="descricao" id="descricao-servico" cols="60" rows="10"></textarea>
+            </div>
+            <div class="ibutton">
+                <input type="submit" id="submit" class="button" value="Cadastrar"onclick="validaCadastro()">
+                <input type="reset" class="button" value="Limpar">
+                <a href="1_index.html">
+                    <input type="button" class="button" value="Voltar">
+                </a>
+            </div>
+            </form>
+        </section>
+</div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <p id="modal-message"></p>
+        <button id="close-modal">OK</button>
+    </div>
+</div>
+<script src="../validator.js"></script>
+<script src="../login.js"></script>
+<script>
+    window.onload = function () {
+        insereNomeMotorista();
+    };
+</script>
+</body>
+<div>
+    <footer class="main-footer">
+        <h5>Prefeitura do Município de Maringá</h5>
+        <p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
+    </footer>
+</div>
+
+</html>

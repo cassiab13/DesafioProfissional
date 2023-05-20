@@ -2,20 +2,41 @@
 function enableLogin(){
   document.getElementById('matricula').disabled = false;
   document.getElementById('userPassword').disabled = false;
+  document.getElementById('login-button').disabled = false;
+}
+    
+function startCountdown() {
+  let counter = 20;
+  const counterElement = document.getElementById('counter');
+  counterElement.textContent = counter;
+
+  const countdownInterval = setInterval(() => {
+    counter--;
+    
+    modalMessage.textContent = `Nova tentativa permitida em ${counter} segundos.`;
+    closeModal.disabled = true;
+    if (counter <= 0) {
+      clearInterval(countdownInterval);
+      modal.style.display = 'none';
+    }
+  }, 1000);
 }
 
 const loginButton = document.getElementById('login-button');
 const modal = document.getElementById('modal');
 const modalMessage = document.getElementById('modal-message');
+const modalMessage1 = document.getElementById('modalMessage');
 const closeModal = document.getElementById('close-modal');
-let tentativas = 0;
+let tentativas = 0, contador;
 
 loginButton.addEventListener('click', (event) => {
   event.preventDefault();
   
-  let matriculasDigitadas = [1234, 1235, 1236, 1237];
-  let senhasDigitadas = [12345678, 123456, 456789, 7654321];
-  
+  let matriculasDigitadas = [1234];
+  let senhasDigitadas = [12345678];
+  let matriculaMotorista = [9876];
+  let senhaMotorista = [987654321];
+   
   const matricula = document.getElementById('matricula');
   const senha = document.getElementById('userPassword');
   
@@ -23,8 +44,8 @@ loginButton.addEventListener('click', (event) => {
   const senhaDigitada = parseInt(senha.value);
   
   if (matriculasDigitadas.includes(matriculaDigitada) && senhasDigitadas.includes(senhaDigitada)) {
-    // Login bem sucedido
-    modalMessage.textContent = 'Login bem sucedido';
+    // Login administrador efetuado com sucesso
+    modalMessage.textContent = 'Login efetuado com sucesso';
     modal.style.display = 'block';
 
     modal.addEventListener('click', () => {
@@ -37,20 +58,39 @@ loginButton.addEventListener('click', (event) => {
       window.location.href="../html/2_paginaInicial.html";
     }, 3000);
    
-  } else {
+  } else if (matriculaMotorista.includes(matriculaDigitada) && senhaMotorista.includes(senhaDigitada)){
+    modalMessage.textContent = 'Login efetuado com sucesso';
+    modal.style.display = 'block';
+
+    modal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      window.location.href="../html/9_telaMotorista.html";
+    });
+
+    setTimeout(function(){
+      modal.style.display = 'none';
+      window.location.href="../html/9_telaMotorista.html";
+    }, 3000);
+  } 
+  
+  else {
     // Login mal sucedido
     tentativas++;
-    if (tentativas === 3) {
-      matricula.disabled = true;
-      senha.disabled = true;
+    console.log(tentativas);
+    if (tentativas >= 3) {
+      matricula.disabled = true; //desabilita campo matrícula
+      senha.disabled = true; // desabilita campo senha
+      loginButton.disabled = true; // desabilita campo login
+      closeModal.disabled = true; // fecha caixa de diálogo
       modalMessage.textContent = `Você excedeu o número de tentativas permitidas`;
+      
       modal.style.display = 'block';
-      setTimeout(enableLogin, 30000);
-      // console.log('Você excedeu o número de tentativas permitidas.');
+      setTimeout(enableLogin, 20000); //desabilita por 20 segundos.
+      startCountdown();
     } else {
       modalMessage.textContent = `Matrícula e/ou senha incorretos. Tentativa ${tentativas} de 3.`;
       modal.style.display = 'block';
-      // console.log(`Matrícula e/ou senha inconrretos. Tentativa ${tentativas} de 3.`);
+      // console.log(`Matrícula e/ou senha incorretos. Tentativa ${tentativas} de 3.`);
     }
   }
 });
@@ -58,3 +98,17 @@ loginButton.addEventListener('click', (event) => {
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
+
+//recuperar senha
+
+
+//cria campo com nome e matrícula do usuário logado
+
+function insereNomeMotorista() {
+
+    let nomeMotorista = 'João das Couves';
+    let spanNomeMotoristaTopo = document.getElementById('nomeMotoristaTopo');
+    let spanNomeMotoristaFormulario = document.getElementById('nomeMotoristaFormulario');
+    spanNomeMotoristaTopo.textContent = `Usuário logado: ${nomeMotorista}`;
+    spanNomeMotoristaFormulario.textContent = nomeMotorista;
+}

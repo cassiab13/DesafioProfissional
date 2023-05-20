@@ -1,3 +1,4 @@
+
 //validação do formulário
 class ValidateForm {
     constructor() {
@@ -124,3 +125,27 @@ class ValidateForm {
 }
 
 const valida = new ValidateForm();
+
+function validaCadastro(){
+    const cadastrarButton = document.getElementById('submit');
+    const modalMessage = document.getElementById('modal-message');
+    const closeModal = document.getElementById('close-modal');
+
+    cadastrarButton.addEventListener('click', (event) => {
+        event.preventDefault();
+    
+    if(valida.isValid()){
+        modalMessage.textContent = 'Cadastro efetuado com sucesso';
+        modal.style.display = 'block';
+    }
+    else {
+        modalMessage.textContent = 'Preencha os campos';
+        modal.style.display = 'block';}
+    
+    })   
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        window.location.href="../html/9_1_solicitarReserva.html"
+      });
+}
