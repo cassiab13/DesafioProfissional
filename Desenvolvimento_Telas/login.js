@@ -99,9 +99,6 @@ closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
-//recuperar senha
-
-
 //cria campo com nome e matrícula do usuário logado
 
 function insereNomeMotorista() {
@@ -112,3 +109,34 @@ function insereNomeMotorista() {
     spanNomeMotoristaTopo.textContent = `Usuário logado: ${nomeMotorista}`;
     spanNomeMotoristaFormulario.textContent = nomeMotorista;
 }
+
+// Função para alternar o modo claro e escuro
+function toggleDarkMode() {
+  const body = document.body;
+  const logo = document.querySelector('.logo');
+  const menu = document.querySelector(".menu")
+  const logoReservex = document.querySelector('.logo_reservex')
+  const header = document.querySelector('.header')
+  // Verifica se o modo escuro já está ativado
+  const isDarkMode = body.classList.contains('dark-mode');
+
+  // Se o modo escuro estiver ativado, desativa-o
+  if (isDarkMode) {
+    body.classList.remove('dark-mode');
+    logo.classList.remove('dark-mode')
+    menu.classList.remove('dark-mode')
+    logoReservex.classList.remove('dark-mode')
+    header.classList.remove('dark-mode')
+  } else {
+    // Se o modo escuro estiver desativado, ativa-o
+    body.classList.add('dark-mode');
+    logo.classList.add('dark-mode')
+    menu.classList.add('dark-mode')
+    logoReservex.classList.add('dark-mode')
+    header.classList.add('dark-mode')
+  }
+}
+
+// Adiciona o evento de clique ao botão de alternância
+const toggleButton = document.getElementById('toggleDarkMode');
+toggleButton.addEventListener('click', toggleDarkMode);

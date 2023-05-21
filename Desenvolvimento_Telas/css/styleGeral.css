@@ -74,17 +74,18 @@
   color: white;
   }
   
-  header img {
+.logo1 {
   width: 100px;
   }
   
   header .logo {
+  width: 100px;
   text-align: center;
   }
   
   .menu {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   list-style-type: none;
   color: black;
   float: right;
@@ -108,7 +109,7 @@
   transition: 0.5s;
   }
   
-  div footer{
+  footer{
   margin-top: 150px;
   }
   
@@ -144,6 +145,7 @@
   
   .button{
   text-decoration: none;
+  padding: 10px;  
   border-radius: 15px;
   width: 150px;
   font-size: 0.8rem;
@@ -158,6 +160,38 @@
   color: white;
   border-color: white;
   }
+
+  #toggleDarkMode{
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  /* Estilos para o modo escuro */
+.dark-mode  {
+  background-color: #222;
+  color: #fff;
+}
+
+.logo.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+.logo_reservex.dark-mode{
+  background-color: #222;
+  color: white;
+}
+
+.menu.dark-mode{
+  background-color: #222;
+  color: white;
+}
+.dark-mode header {
+  background: #222;
+  color: white;
+}
+
   
   @media only screen and (max-width: 768px) {
   h2 {

@@ -12,51 +12,44 @@
 	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap"
 		rel="stylesheet">
 	<title class="titulo">Reservex - Esqueci minha senha</title>
+	<script src="../recuperarSenha.js"></script>
 </head>
 <div class="container">
-	<div class="container">
-		<header>
-			<div></div>
-			<div class="logo">
-				<a href="http://www.maringa.pr.gov.br" target="_blank"><img class="logo1"
-						src="../images/prefeitura_logo.png" /></a>
-			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="http://www.maringa.pr.gov.br">Site da Prefeitura</a></li>
-					<li><a href="1_index.html">Sair</a></li>
-				</ul>
-			</div>
-		</header>
-
-		<body>
-			<main>
-				<h1><img src="../images/LOGO (2).png" class="logo_reservex" alt=""></h1>
-				<h2 class="aplicativox">Recuperar senha</h2>
-				<script>
-					function alerta() {
-						alert("Nova senha enviada para o e-mail cadastrado");
-					}
-				</script>
-				<div class="section-container">
-					<div class="entrarSistema">
-						<label for="matricula" class="label-control">Digite sua matrícula</label>
-						<input type="text" name="matricula" id="matricula" class="form-control">
-					</div>
+	<header class="header">
+		<div></div>
+		<div class="logo">
+			<a href="http://www.maringa.pr.gov.br" target="_blank"><img class="logo1"
+					src="../images/prefeitura_logo.png" /></a>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="http://www.maringa.pr.gov.br">Site da Prefeitura</a></li>
+				<li> <img id="darkMode" src="../images/MaterialSymbolsDarkModeOutline.svg" alt="botão dark Mode"></li>
+			</ul>
+		</div>
+	</header>
+	<body>
+	
+		<main>
+			<h1><img src="../images/LogoFundo.png" class="logo_reservex" alt=""></h1>
+			<h2 class="aplicativox">Recuperar senha</h2>
+			<div class="section-container">
+				<div class="entrarSistema">
+					<label for="matricula" class="label-control">Digite sua matrícula</label>
+					<input type="text" name="matricula" id="matricula-digitada" class="form-control">
 				</div>
-				<div class="ibutton">
-					<input type="button" class="button" onclick="alerta()" value="Solicitar nova senha"></input>
-					<a href="1_index.html"><input type="button" class="button" value="Voltar"></a>
-				</div>
-	</div>
-	</main>
-	<div>
-		<footer class="main-footer">
-			<h5>Prefeitura do Município de Maringá</h5>
-			<p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
-		</footer>
-	</div>
-
+			</div>
+			<div class="ibutton">
+				<input type="button" id="recuperarSenha" class="button" value="Solicitar nova senha"></input>
+				<a href="1_index.html"><input type="button" class="button" value="Voltar"></a>
+			</div>
+		</main>
+		<script src="../darkMode.js"></script>
 	</body>
 
+	<footer class="main-footer">
+		<h5>Prefeitura do Município de Maringá</h5>
+		<p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
+	</footer>
+</div>
 </html>
