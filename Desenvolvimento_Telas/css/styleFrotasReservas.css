@@ -65,7 +65,7 @@
 }
 
 #main {
-  margin: 0px 0px 20px 150px;
+  margin: 0px 0px 20px 0px;
   width: 100%;
   display: flex;
 }
@@ -81,6 +81,7 @@
   display: flex;
   padding: 12px;
   text-decoration: none;
+  background-color: red;
 }
 
 #main .vertical-menu a:hover {
@@ -104,6 +105,7 @@
   width: 100%;
   margin-left: 50px;
   margin-right: 50px;
+  
 }
 
 .modalDialog {

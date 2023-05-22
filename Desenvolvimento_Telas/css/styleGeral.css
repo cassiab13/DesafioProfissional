@@ -191,6 +191,10 @@
   background: #222;
   color: white;
 }
+.permanecerLogado.dark-mode {
+  background-color: red;
+  color: white;
+}
 
   
   @media only screen and (max-width: 768px) {
