@@ -81,7 +81,7 @@
   display: flex;
   padding: 12px;
   text-decoration: none;
-  background-color: red;
+  /* background-color: red; */
 }
 
 #main .vertical-menu a:hover {

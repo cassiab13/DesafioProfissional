@@ -4,7 +4,7 @@ function DarkMode() {
     const logo = document.querySelector('.logo');
     const menu = document.querySelector('.menu');
     const logoReservex = document.querySelector('.logo_reservex');
-
+    
     // Verifica se o modo escuro já está ativado
     const isDarkMode = body.classList.contains('dark-mode');
   

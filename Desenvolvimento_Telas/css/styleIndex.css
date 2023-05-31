@@ -54,8 +54,8 @@
   }
   
   #close-modal {
-  background-color: var(--grass-green);
-  color: #fff;
+  background-color: rgb(94, 239, 159);
+  color: #ffffff;
   border: none;
   padding: 10px;
   margin-top: 20px;

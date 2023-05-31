@@ -117,6 +117,8 @@ function toggleDarkMode() {
   const menu = document.querySelector(".menu")
   const logoReservex = document.querySelector('.logo_reservex')
   const header = document.querySelector('.header')
+  const permanecerLogado = document.querySelector('#permanecerLogado')
+  
   // Verifica se o modo escuro já está ativado
   const isDarkMode = body.classList.contains('dark-mode');
 
@@ -127,6 +129,7 @@ function toggleDarkMode() {
     menu.classList.remove('dark-mode')
     logoReservex.classList.remove('dark-mode')
     header.classList.remove('dark-mode')
+    permanecerLogado.classList.remove('dark-mode')
   } else {
     // Se o modo escuro estiver desativado, ativa-o
     body.classList.add('dark-mode');
@@ -134,6 +137,7 @@ function toggleDarkMode() {
     menu.classList.add('dark-mode')
     logoReservex.classList.add('dark-mode')
     header.classList.add('dark-mode')
+    permanecerLogado.classList.add('dark-mode')
   }
 }
 
