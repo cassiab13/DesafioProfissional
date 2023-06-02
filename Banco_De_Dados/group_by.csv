@@ -1,0 +1,11 @@
+MATRICULA,CODIGOSECRETARIA,NOMEPESSOA,CPFPESSOA,EMAIL,TIPOPERMISSAO,CNH,DATAVENCIMENTO,TIPOCNH
+1234,1,"Maria José das Dores",35248932017,mariadasdores@gmail.com,0,84924838587,2028-05-09,D
+1236,2,"Felipe Samuel Novaes",80238772675,felipenovaes@gmail.com,0,28654433956,2027-06-02,D
+1237,3,"Emanuel de Paula",12845548800,emanueldepaula@gmail.com,1,57140709461,2028-11-17,D
+1238,4,"Adriana Marlene da Conceição",31918872619,adrianaconceicao@gmail.com,0,53868985626,2026-12-01,D
+1231,5,"Francisco Lopes da Silva",06642971965,franciscolsilva@gmail.com,1,94359195082,2024-07-13,D
+1230,5,"Cláudio Oliveira",16127484227,claudiooliveira@gmail.com,0,06426472715,2027-10-03,D
+1239,6,"Rosângela Assunção",04666385665,rosangelaassuncao@gmail.com,1,54884888860,2029-09-12,D
+1233,8,"Juan Alexandre Cavalcanti",23074338210,juancavalcanti@gmail.com,1,49190655970,2026-02-20,C
+1235,9,"Claudinéia da Silva",48523283234,claudineiadasilva@gmail.com,1,82516136525,2025-08-21,D
+1232,10,"Sebastião Osvaldo Almada",36611770607,tiaoalmada@gmail.com,0,47896595705,2025-12-15,D
