@@ -187,10 +187,12 @@
   background-color: #222;
   color: white;
 }
+
 .dark-mode header {
   background: #222;
   color: white;
 }
+
 .permanecerLogado.dark-mode {
   color: white;
 }

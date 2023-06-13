@@ -3,7 +3,6 @@ function DarkMode() {
   const body = document.body;
   const logo = document.querySelector('.logo');
   const menu = document.querySelector('.menu');
-  const logoReservex = document.querySelector('.logo_reservex');
   const darkModeButton = document.getElementById('toggleDarkMode');
 
   // Verifica se o modo escuro já está ativado
@@ -11,43 +10,30 @@ function DarkMode() {
 
   // Desativa
   if (isDarkMode) {
-    body.classList.remove('dark-mode');
-    logo.classList.remove('dark-mode');
-    menu.classList.remove('dark-mode');
-    logoReservex.classList.remove('dark-mode');
-    darkModeButton.src = "../images/MaterialSymbolsDarkModeOutline.svg";
+        body.classList.remove('dark-mode');
+        logo.classList.remove('dark-mode');
+        menu.classList.remove('dark-mode');
+        darkModeButton.src = "../images/MaterialSymbolsDarkModeOutline.svg";
+        DarkLogo("../images/logo_sem_fundo.png");
   } else {
-    // Ativa
-    body.classList.add('dark-mode');
-    logo.classList.add('dark-mode');
-    menu.classList.add('dark-mode');
-    logoReservex.classList.add('dark-mode');
-    darkModeButton.src = "../images/MaterialSymbolsLightModeOutline.svg";
-  }
-
-  // DarkLogo(!isDarkMode);
+        // Ativa
+        body.classList.add('dark-mode');
+        logo.classList.add('dark-mode');
+        menu.classList.add('dark-mode');
+        console.log('entrei');
+        darkModeButton.src = "../images/MaterialSymbolsLightModeOutline.svg";
+        DarkLogo("../images/logo_sem_fundo_branco.png");
+    }
 }
 
 // Botão Dark Mode
 const darkModeButton = document.getElementById('toggleDarkMode');
 darkModeButton.addEventListener('click', DarkMode);
-darkModeButton.addEventListener('click', DarkLogo);
 
 // Função para alterar a logo
-// function DarkLogo(isDarkMode) {
-//   console.log("Entrei na função")
-//   const logoReservex = document.getElementById('logoReservex');
-  
-//   if (isDarkMode) {
-//     logoReservex.src = "../images/Logo_dark.jpeg";
-//   } else {
-//     logoReservex.src = "../images/LogoFundo.png";
-//   }
-// }
-
-function DarkLogo() {
-  console.log("Entrei na função")
+function DarkLogo(caminhoImagem)
+{
   const logoReservex = document.getElementById('logoReservex');
-    logoReservex.src = "../images/Logo_dark.jpeg";
+  logoReservex.src = caminhoImagem;
 }
 
