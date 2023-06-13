@@ -149,3 +149,51 @@ function validaCadastro(){
         window.location.href="../html/9_1_solicitarReserva.html"
       });
 }
+
+function validaReserva(){
+    const reservarButton = document.getElementById('submit');
+    const modalMessage = document.getElementById('modal-message');
+    const closeModal = document.getElementById('close-modal');
+
+    reservarButton.addEventListener('click', (event) => {
+        event.preventDefault();
+    
+    if(valida.isValid()){
+        modalMessage.textContent = 'Reserva efetuada com sucesso';
+        modal.style.display = 'block';
+    }
+    else {
+        modalMessage.textContent = 'Preencha os campos';
+        modal.style.display = 'block';}
+    
+    })   
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        window.location.href="../html/9_1_solicitarReserva.html"
+      });
+}
+
+function validaSolicitacao(){
+    const reservarButton = document.getElementById('submit');
+    const modalMessage = document.getElementById('modal-message');
+    const closeModal = document.getElementById('close-modal');
+
+    reservarButton.addEventListener('click', (event) => {
+        event.preventDefault();
+    
+    if(valida.isValid()){
+        modalMessage.textContent = 'Solicitação de manutenção efetuada com sucesso';
+        modal.style.display = 'block';
+    }
+    else {
+        modalMessage.textContent = 'Preencha os campos';
+        modal.style.display = 'block';}
+    
+    })   
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        window.location.href="../html/9_1_solicitarReserva.html"
+      });
+}

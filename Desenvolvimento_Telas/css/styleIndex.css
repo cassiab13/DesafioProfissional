@@ -53,7 +53,8 @@
   flex-direction: column;
   }
   
-  #close-modal {
+  #close-modal,
+  #close-modal1 {
   background-color: rgb(94, 239, 159);
   color: #ffffff;
   border: none;

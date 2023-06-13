@@ -102,12 +102,9 @@ closeModal.addEventListener('click', () => {
 //cria campo com nome e matrícula do usuário logado
 
 function insereNomeMotorista() {
-
-    let nomeMotorista = 'João das Couves';
+    let nomeMotorista = 'João Maria';
     let spanNomeMotoristaTopo = document.getElementById('nomeMotoristaTopo');
-    let spanNomeMotoristaFormulario = document.getElementById('nomeMotoristaFormulario');
     spanNomeMotoristaTopo.textContent = `Usuário logado: ${nomeMotorista}`;
-    spanNomeMotoristaFormulario.textContent = nomeMotorista;
 }
 
 // Função para alternar o modo claro e escuro
