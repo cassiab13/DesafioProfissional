@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="../css/styleGeral.css">
- <link rel="stylesheet" href="../css/styleCadastro.css" />
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap" rel="stylesheet">
- <title class="titulo">Reservex - Módulo Cadastro Usuário</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleGeral.css">
+    <link rel="stylesheet" href="../css/styleCadastro.css" />
+    <link rel="stylesheet" href="../css/styleIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <title class="titulo">Reservex - Módulo Cadastro Usuário</title>
 </head>
 <div class="container">
     <header>
@@ -31,58 +34,62 @@
         <h1><img src="../images/LogoFundo.png" class="logo_reservex" alt=""></h1>
         <h2>Cadastro do usuário</h2>
         <section class="form-content">
-            <div class = "forms-items">
-            <form method="post" action="#" class="form">
-                <div>
-                    <label class = "hidden">Nome</label>
-                    <input type="text" class = "firstName valid" placeholder="Nome">
-                    <span id="msgError"></span>
-                </div>
-                <div>
-                    <label class = "hidden">Sobrenome</label>
-                    <input type="text" class = "lastName valid"placeholder="Sobrenome">
-                    <span id="msgError"></span>
-                </div>
-                <div>
-                    <label class = "hidden">E-mail</label>
-                    <input type="text" class = "email valid" placeholder="Email">
-                    <span id="msgError"></span>
-                </div>
-                <div>
-                    <label class = "hidden">Matrícula</label>
-                    <input type="text" class = "registration valid" placeholder="Matrícula">
-                    <span id="msgError"></span>
-                </div>
-                <div class="tb-2">
-                    <br>
-                    <label class="visible" for="sector">Escolha a Secretaria: </label><br><br>
-                    <select name="sector" id="sector">
-                        <option value="SAET" id="01">01 -Secretaria de Aceleração Econômica e Turismo</option>
-                        <option value="SEL" id="02">02 - Secretaria de Esportes e Lazer</option>
-                        <option value="SF" id="03">03 - Secretaria da Fazenda</option>
-                        <option value="SMU" id="04">04 -Secretaria da Mobilidade Urbana</option>
-                        <option value="SF" id="05">05 - Secretaria de Frotas</option>
-                        <br><br>
-                    </select><br><br>
-                </div>
+            <div class="forms-items">
+                <form method="post" action="#" class="form">
+                    <div>
+                        <label class="hidden">Nome</label>
+                        <input type="text" class="firstName valid" placeholder="Nome">
+                        <span id="msgError"></span>
+                    </div>
+                    <div>
+                        <label class="hidden">Sobrenome</label>
+                        <input type="text" class="lastName valid" placeholder="Sobrenome">
+                        <span id="msgError"></span>
+                    </div>
+                    <div>
+                        <label class="hidden">E-mail</label>
+                        <input type="text" class="email valid" placeholder="Email">
+                        <span id="msgError"></span>
+                    </div>
+                    <div>
+                        <label class="hidden">Matrícula</label>
+                        <input type="text" class="registration valid" placeholder="Matrícula">
+                        <span id="msgError"></span>
+                    </div>
+                    <div class="tb-2">
+                        <br>
+                        <label class="visible" for="sector">Escolha a Secretaria: </label><br><br>
+                        <select name="sector" id="sector">
+                            <option value="SAET" id="01">01 -Secretaria de Aceleração Econômica e Turismo</option>
+                            <option value="SEL" id="02">02 - Secretaria de Esportes e Lazer</option>
+                            <option value="SF" id="03">03 - Secretaria da Fazenda</option>
+                            <option value="SMU" id="04">04 -Secretaria da Mobilidade Urbana</option>
+                            <option value="SF" id="05">05 - Secretaria de Frotas</option>
+                            <br><br>
+                        </select><br><br>
+                    </div>
             </div>
-                <div class="ibutton">
-                    <input type="submit" id = "submit" class="button" value="Cadastrar">
-                    <input type="reset" class="button" value="Limpar">
-                    <a href="5_gerenciarUsuario.html"><input type="button" class="button" value="Voltar"></a>
-                </div>
+            <div class="ibutton">
+                <input type="submit" id="submit" class="button" value="Cadastrar" onclick="validaCadastro()">
+                <input type="reset" class="button" value="Limpar">
+                <a href="5_gerenciarUsuario.html"><input type="button" class="button" value="Voltar"></a>
+            </div>
             </form>
         </section>
-        <script src="../validator.js"></script>
-        </div>
-    </body>
-        </div>
-        <script src="../validator.js"></script>
-    </body>
-    <div>
-        <footer class="main-footer">
-                    <h5>Prefeitura do Município de Maringá</h5>
-                    <p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
-                </footer>
-        </div>
+</div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <p id="modal-message"></p>
+        <button id="close-modal">OK</button>
+    </div>
+</div>
+<script src="../validator.js"></script>
+</body>
+<div>
+    <footer class="main-footer">
+        <h5>Prefeitura do Município de Maringá</h5>
+        <p>Telefone: (44) 3221-1234 - Av. XV de Novembro, 701 - Centro - Maringá-PR - CEP: 87013-230</p>
+    </footer>
+</div>
+
 </html>

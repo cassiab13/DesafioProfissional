@@ -137,6 +137,7 @@ function validaCadastro(){
     if(valida.isValid()){
         modalMessage.textContent = 'Cadastro efetuado com sucesso';
         modal.style.display = 'block';
+        console.log("aqui")
     }
     else {
         modalMessage.textContent = 'Preencha os campos';
@@ -146,7 +147,7 @@ function validaCadastro(){
 
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
-        window.location.href="../html/9_1_solicitarReserva.html"
+        window.location.href="../html/2_paginaInicial.html"
       });
 }
 

@@ -6,7 +6,7 @@ function enableLogin(){
 }
     
 function startCountdown() {
-  let counter = 20;
+  let counter = 5;
   const counterElement = document.getElementById('counter');
   counterElement.textContent = counter;
 
@@ -85,7 +85,7 @@ loginButton.addEventListener('click', (event) => {
       modalMessage.textContent = `Você excedeu o número de tentativas permitidas`;
       
       modal.style.display = 'block';
-      setTimeout(enableLogin, 20000); //desabilita por 20 segundos.
+      setTimeout(enableLogin, 5000); //desabilita por 20 segundos.
       startCountdown();
     } else {
       modalMessage.textContent = `Matrícula e/ou senha incorretos. Tentativa ${tentativas} de 3.`;
