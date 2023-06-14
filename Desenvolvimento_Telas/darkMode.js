@@ -18,7 +18,7 @@ function DarkMode() {
         permanecerLogado.classList.remove('dark-mode');
         sitePrefeitura.classList.remove('dark-mode');
         darkModeButton.src = "../images/MaterialSymbolsDarkModeOutline.svg";
-        DarkLogo("../images/logo_sem_fundo.png");
+        DarkLogo("../images/logoFundo.png");
   } else {
         // Ativa
         body.classList.add('dark-mode');
