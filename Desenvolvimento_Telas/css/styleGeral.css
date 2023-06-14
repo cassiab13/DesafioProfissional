@@ -168,23 +168,15 @@
     cursor: pointer;
   }
   /* Estilos para o modo escuro */
-.dark-mode  {
-  background-color: #222;
-  color: #fff;
-}
 
-.logo.dark-mode {
+.dark-mode
+{
   background-color: #222;
   color: white;
 }
 
-.logo_reservex.dark-mode{
-  background-color: #222;
-  color: white;
-}
-
-.menu.dark-mode{
-  background-color: #222;
+#sitePrefeitura.dark-mode{
+  background: #222;
   color: white;
 }
 

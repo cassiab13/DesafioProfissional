@@ -3,6 +3,8 @@ function DarkMode() {
   const body = document.body;
   const logo = document.querySelector('.logo');
   const menu = document.querySelector('.menu');
+  const sitePrefeitura = document.getElementById('sitePrefeitura');
+  const permanecerLogado = document.getElementById('permanecerLogado');
   const darkModeButton = document.getElementById('toggleDarkMode');
 
   // Verifica se o modo escuro já está ativado
@@ -13,6 +15,8 @@ function DarkMode() {
         body.classList.remove('dark-mode');
         logo.classList.remove('dark-mode');
         menu.classList.remove('dark-mode');
+        permanecerLogado.classList.remove('dark-mode');
+        sitePrefeitura.classList.remove('dark-mode');
         darkModeButton.src = "../images/MaterialSymbolsDarkModeOutline.svg";
         DarkLogo("../images/logo_sem_fundo.png");
   } else {
@@ -20,7 +24,8 @@ function DarkMode() {
         body.classList.add('dark-mode');
         logo.classList.add('dark-mode');
         menu.classList.add('dark-mode');
-        console.log('entrei');
+        permanecerLogado.classList.add('dark-mode');
+        sitePrefeitura.classList.add('dark-mode');
         darkModeButton.src = "../images/MaterialSymbolsLightModeOutline.svg";
         DarkLogo("../images/logo_sem_fundo_branco.png");
     }
